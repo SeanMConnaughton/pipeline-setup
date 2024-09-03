@@ -2,14 +2,15 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 20
     commands:
+      - echo "Installing Node.js version 20 ..."
+      - n $NODE_20_VERSION
       - npm install
+
   build:
     commands:
-      - CI=false npm test -- --coverage
+      - npm run build
+
 artifacts:
-  base-directory: build
   files:
     - '**/*'

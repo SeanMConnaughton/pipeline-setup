@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Installing Node.js version 20 ..."
       - n $NODE_20_VERSION
-      - cd /codebuild/output/src3139147349/src/github.com/SeanMConnaughton/pipeline-setup
+      - cd $CODEBUILD_SRC_DIR
       - npm install
 
   build:
